@@ -1,0 +1,8 @@
+matt,2192
+alice,1500
+howdy,786
+satan,666
+david,306
+Euler,290
+bob,200
+charlie,182
