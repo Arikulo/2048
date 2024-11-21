@@ -76,7 +76,7 @@ def score(array): # finds total, this isn't how normaLl 2048 is scored, but it w
 def scoreboard(name=None,value=0,yes=False): # opens '2048_scores.txt', which has all names and scores, and adds the players score if wanted
     colour_list=list(colours.values())[1:]
 
-    with open('D:/Python/scripts/2048/2048_scores.txt','r+') as f:
+    with open('2048_scores.txt','r+') as f:
         scores = [a.split(',') for x in f.readlines() for a in x.split('\n') if a]
         names = [scores[i][0] for i in range(len(scores))]
 
@@ -90,7 +90,7 @@ def scoreboard(name=None,value=0,yes=False): # opens '2048_scores.txt', which ha
 
     scores.sort(key=lambda x:int(x[1]), reverse=True)
 
-    with open('D:/Python/scripts/2048/2048_scores.txt','w') as f:
+    with open('2048_scores.txt','w') as f:
         for i in scores:
             f.write(str(i[0]) + ',' + str(i[1]) + '\n')
     a=int(max(len(scores[i][0]) for i in range(len(scores))))
